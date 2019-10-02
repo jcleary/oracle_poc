@@ -1,15 +1,14 @@
 <?php
 
-echo "Hello World";
+echo "Proof of concent; PHP/Apache and Oracle XE";
+echo "<br>";
+echo "<br>";
 
 require_once('db.php');
 
-$query = "select id, name from users";
-
-
-$stid = oci_parse($conn, $query);
-
+$stid = oci_parse($conn, "select id, name from users");
 oci_execute($stid);
+
 echo "<table border='1'>\n";
 while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
     echo "<tr>\n";
