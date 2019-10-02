@@ -13,7 +13,6 @@ RUN alien --scripts -i packages/oracle-instantclient19.3-basiclite-19.3.0.0.0-1.
 RUN alien --scripts -i packages/oracle-instantclient19.3-sqlplus-19.3.0.0.0-1.x86_64.rpm
 RUN alien --scripts -i packages/oracle-instantclient19.3-devel-19.3.0.0.0-1.x86_64.rpm
 
-RUN ORACLE_HOME=usr/lib/oracle/19.3/client64/ && \
-  pecl install oci8-2.0.12
+RUN pecl install oci8-2.0.12
 
 
