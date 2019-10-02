@@ -15,3 +15,6 @@ RUN alien --scripts -i packages/oracle-instantclient19.3-devel-19.3.0.0.0-1.x86_
 
 RUN pecl install oci8-2.0.12
 
+COPY ./php.ini /usr/local/etc/php/
+
+
