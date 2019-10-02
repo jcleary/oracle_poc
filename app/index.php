@@ -2,11 +2,7 @@
 
 echo "Hello World";
 
-$username = 'system';
-$password = 'oracle';
-$connection_string = 'oracle';
-
-$conn = oci_connect($username , $password , $connection_string);
+require_once('db.php');
 
 $query = "select id, name from users";
 
