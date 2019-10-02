@@ -1,11 +1,17 @@
 version: '3'
 
 services: 
-  oracle-db:
+  oracle:
     image: oracleinanutshell/oracle-xe-11g:latest
     ports:
       - 1521:1521
       - 5500:5500
 
-  app:
+  php:
     build: dockerfiles/php
+    ports:
+      - 80:80
+    volumes:
+      - ./app/:/var/www/html
+    expose:
+      - "80"
